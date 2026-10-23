@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440" font-family="sans-serif" font-size="13">
+<style>.t{fill:#222}@media (prefers-color-scheme:dark){.t{fill:#eee}}</style><title>Arquitetura em camadas</title>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#888"/></marker></defs>
+<g fill="#7a8ba3" fill-opacity="0.25" stroke="#888" stroke-width="1.5">
+<rect x="130" y="15" width="260" height="55" rx="8"/><rect x="130" y="100" width="260" height="55" rx="8"/><rect x="130" y="185" width="260" height="55" rx="8"/>
+<rect x="130" y="270" width="260" height="55" rx="8"/><rect x="130" y="355" width="260" height="55" rx="8"/></g>
+<g class="t" text-anchor="middle">
+<text x="260" y="38" font-weight="bold">Security filter chain</text><text x="260" y="56">STATELESS, /auth/** publico</text>
+<text x="260" y="123" font-weight="bold">JwtAuthFilter</text><text x="260" y="141">le Bearer, define Authentication</text>
+<text x="260" y="208" font-weight="bold">Controller</text><text x="260" y="226">AuthController, ApiController (@PreAuthorize)</text>
+<text x="260" y="293" font-weight="bold">JwtService / UserRepository</text><text x="260" y="311">emite e valida JWT (HS256) / JPA</text>
+<text x="260" y="378" font-weight="bold">H2 (em memoria)</text><text x="260" y="396">create-drop</text></g>
+<g stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#a)">
+<path d="M260,70 V98"/><path d="M260,155 V183"/><path d="M260,240 V268"/><path d="M260,325 V353"/>
+<path d="M130,128 H70 V297 H128" stroke-dasharray="4 3"/></g>
+<text x="62" y="215" class="t" font-size="11" transform="rotate(-90 62 215)" text-anchor="middle">parse(token)</text>
+</svg>
