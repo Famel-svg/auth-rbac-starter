@@ -1,0 +1,12 @@
+app:
+  jwt:
+    secret: ${JWT_SECRET}            # sem default: a app nao sobe sem a variavel
+    expiration-seconds: ${JWT_EXPIRATION_SECONDS:900}
+  # Seed opcional de ADMIN: defina ADMIN_EMAIL e ADMIN_PASSWORD. Registro publico sempre cria USER.
+  admin:
+    email: ${ADMIN_EMAIL:}
+    password: ${ADMIN_PASSWORD:}
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
